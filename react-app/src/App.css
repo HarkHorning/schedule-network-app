@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* --bg-dark: #282c34; */
+  --bg-dark: #8b8a83;
+  --bg-light: #d3dcec;
+  --dark-red: rgb(173, 68, 68);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-dark);
+  height: 100svh;
+}
+
+.navigation-bar {
+  width: 100%;
+  background-color: transparent;
+  color: var(--dark-red);
+  color: white;
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 0.75rem 1rem 0.75rem;
+  /* background-color: var(--bg-light); */
+  /* background-color: black; */
+  /* border-bottom: 1px solid var(--bg-light); */
+}
+
+.page-title {
+  border-bottom: 2px solid var(--dark-red);
+}
+
+.side-bar {
+  height: 100%;
+  width: 12rem;
+  background-color: transparent;
+  font-size: 1.25rem;
+  padding: 0.25rem 0.75rem;
+  color: white;
+  border-right: 1px solid var(--bg-light);
+  /* background-color: var(--bg-light); */
+}
+
+.contents {
+  padding: 0.5rem 0 0 0;
+  width: 100%;
+  height: 100%;
+  color: var(--dark-red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page {
+  width: 1000px;
+  height: 100%;
+  background-color: var(--bg-light);
+  color: var(--dark-red);
+}
