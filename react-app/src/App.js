@@ -7,17 +7,17 @@ import Checklist from "./components/contents/Checklist"
 
 
 // Routes
-import  { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import  { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <section className="h-full flex">
-      
-      <BrowserRouter className="h-full flex">
-      <SideNav />
+    <BrowserRouter >
+      <div className="App">
+        <NavBar />
+        
+        <section className="h-full flex">
+        <SideNav />
         <div className='contents'>
           <Routes>
             <Route index element={<Home />} />
@@ -25,9 +25,9 @@ function App() {
             <Route path="Checklist" element={<Checklist />} />
           </Routes>
         </div>
-      </BrowserRouter>
-      </section>
-    </div>
+        </section>
+      </div>
+    </BrowserRouter>
   );
 }
 
