@@ -5,7 +5,7 @@ import  { NavLink } from 'react-router-dom';
 function SideNav() {
   return (
     <div className='side-bar'>
-        <div className='flex flex-col justify-around items-center gap-8'>
+        <div className='side-bar-align'>
             <NavLink className='side-bar-btn' to="/">Home Page</NavLink>
             <NavLink className='side-bar-btn' to="Calendar">Calendar</NavLink>
             <NavLink className='side-bar-btn' to="Checklist">Checklist</NavLink>

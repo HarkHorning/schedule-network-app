@@ -51,6 +51,16 @@ function Calendar() {
 
  
           </ul>
+          <div className='flex flex-col justify-around gap-6'>
+            <h3 className='text-xl mb-6'>People</h3>
+            <div className='flex gap-2'>
+              <input className='border-2 rounded-xl pl-2 p-1 w-1/2' type='text' placeholder='Add a Task'></input>
+              <input className='border-2 rounded-xl pl-2 p-1 w-max' type='date' placeholder='Add a Task'></input>
+              <input className='border-2 rounded-xl pl-2 p-1 w-max' type='time' placeholder='Add a Task'></input>
+            </div>
+            <button className='border-2 w-max p-1 rounded-lg'>Create Task</button>
+          </div>
+
         </div>
     </header>
   );
