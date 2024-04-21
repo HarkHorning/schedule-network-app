@@ -4,6 +4,7 @@ import SideNav from "./components/SideNav";
 import Home from './components/contents/Home';
 import Calendar from "./components/contents/Calendar";
 import Checklist from "./components/contents/Checklist"
+import Signin from "./components/contents/Signin"
 
 
 // Routes
@@ -14,6 +15,7 @@ function App() {
   return (
     <BrowserRouter >
       <div className="App">
+        <div className='glow-effect'></div>
         <NavBar />
         
         <section className="h-full flex">
@@ -23,6 +25,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="Calendar" element={<Calendar />} />
             <Route path="Checklist" element={<Checklist />} />
+            <Route path="Signin" element={<Signin />} />
           </Routes>
         </div>
         </section>

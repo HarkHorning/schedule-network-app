@@ -31,9 +31,11 @@ function Home() {
                 
               </div>
               <img className='w-1/3' src={logo} alt='logo' />
-
-              {/* <div className='home-graphic'></div> */}
             </div>
+            <h3 className='mt-20 text-3xl text-slate-700 font-light'>How do we do it?</h3>
+            <p className='text-lg text-slate-600 mt-8 leading-8 w-4/5 font-semibold'>
+              A way to never miscomunicate schedules again. Seemlessly integrate the schedules of other users with your own.
+            </p>
         </div>
     </header>
   );

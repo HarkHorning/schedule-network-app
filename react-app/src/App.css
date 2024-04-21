@@ -22,6 +22,15 @@
   min-height: 100svh;
 }
 
+.glow-effect {
+  width: 100%;
+  height: 20%;
+  top: 0;
+  position: absolute;
+  background: radial-gradient(circle at top, rgb(253, 255, 158), transparent 20%);
+  z-index: -1;
+}
+
 .navigation-bar {
   width: 100%;
   background-color: var(--bg-light);
@@ -61,6 +70,17 @@
   /* background-color: var(--bg-light); */
 }
 
+.side-bar-btn {
+  font-size: 1.25rem;
+  transition: 10ms;
+  padding: 0.25rem;
+}
+
+.side-bar-btn:hover {
+  font-size: 1.5rem;
+  padding: 0.08rem;
+}
+
 .contents {
   padding: 0.5rem 0 0 0;
   width: 100%;
@@ -77,11 +97,16 @@
   background-color: var(--bg-dark);
   color: var(--dark-red);
   box-shadow: var(--shadow);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
+}
+
+.page.clear {
+  background-color: transparent;
+  box-shadow: none;
 }
 
 .header {
-  height: 25rem;
+  height: 22rem;
   display: flex;
   align-items: center;
   transition: 1s;
@@ -95,7 +120,7 @@
 }
 
 .page-header {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 200;
   padding-bottom: 2rem;
 }
@@ -111,12 +136,17 @@
   align-items: center;
 }
 
-.calendar-day {
-  height: 4rem;
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
 }
 
-.home-graphic {
-  border: 1px solid white;
-  width: 50%;
-  height: 40%;
+.calendar-day {
+  height: 5rem;
+  font-weight: 600;
+}
+
+.past-future {
+  color: rgb(150, 150, 150);
+  font-weight: 100;
 }
