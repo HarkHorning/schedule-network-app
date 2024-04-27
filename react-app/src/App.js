@@ -5,19 +5,18 @@ import Home from './components/contents/Home';
 import Calendar from "./components/contents/Calendar";
 import Checklist from "./components/contents/Checklist";
 import Signin from "./components/contents/Signin";
-
+import BeePath from './bGDecorations/BeePath';
 
 
 // Routes
 import  { BrowserRouter, Routes, Route } from 'react-router-dom';
-
 
 function App() {
   return (
     <BrowserRouter >
       <div className="App">
         <NavBar />
-        
+        <BeePath />
         <section className="orientation h-full flex">
         <SideNav />
         <div className='contents'>
