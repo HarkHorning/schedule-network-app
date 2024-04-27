@@ -9,8 +9,13 @@
   /* --bg-dark: #8b8a83; */
   --bg-light: #d3dcec;
   --bg-light: #f3f3f5;
+  --bg-light: #ffd051;
+  --bg-light: #f3f3f5;
+  --off-black: #31363f;
   --dark-red: rgb(173, 68, 68);
   --shadow: 2px 4px 6px 1px #737d8f2c;
+  --yellow: rgb(255, 239, 98);
+  --darkYellow: rgba(234, 179, 8, 0.842);
 }
 
 .App {
@@ -20,18 +25,52 @@
   background-color: var(--bg-dark);
   background-color: var(--bg-light);
   min-height: 100svh;
+  z-index: 0;
+  overflow-x: hidden;
+
+}
+
+.bee-path {
+  position: fixed;
+  width: 100%;
+  height: 45rem;
+  border-radius: 0 90% 0 0;
+  /* background-color: var(--darkYellow); */
+  border-top: 6px dashed rgba(234, 179, 8, 0.1);
+  border-right: 6px dashed rgba(234, 179, 8, 0.15);
+  top: 20%;
+  left: 0;
+  z-index: -1;
+  transform: rotate(-5deg);
+}
+
+.bee-path-two {
+  position: fixed;
+  width: 100%;
+  height: 25rem;
+  border-radius: 0 100% 0 0;
+  /* background-color: var(--darkYellow); */
+  border-top: 6px dashed rgba(234, 179, 8, 0.15);
+  /* border-right: 6px dashed rgba(234, 179, 8, 0.15); */
+  top: 20%;
+  left: 0;
+  z-index: -1;
+  transform: rotate(-15deg);
 }
 
 .navigation-bar {
   width: 100%;
   background-color: var(--bg-light);
+  background-color: rgb(204, 157, 14);
   color: var(--text-gray);
-  color: black;
-  font-size: 1.25rem;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
   display: flex;
   justify-content: space-between;
-  padding: 0.25rem 0.75rem 0.5rem 0.75rem;
-  border-bottom: 2px solid rgb(228, 238, 89);
+  padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+  /* border-bottom: 4px solid var(--yellow); */
+  font-weight: 500;
+
 }
 
 .nav-buttons-align {
@@ -41,21 +80,25 @@
 
 .nav-btn {
   color: var(--text-gray);
-  color: rgb(114, 115, 119);
+  color: rgb(255, 255, 255);
+  font-size: 1.25rem;
+  font-weight: 500;
+
 }
 
 .page-title {
-  font-weight: 500;
+  color: white;
+  font-weight: 900;
   display: flex;
 }
 
 .only-title {
-  border-bottom: 2px solid var(--dark-red);
+  /* border-bottom: 1px solid var(--dark-red); */
 }
 
 .bee-logo {
   width: 3rem;
-  margin-right: 0.25rem;
+  margin-right: 0.5rem;
   object-fit: contain;
   padding-top: 0.1rem;
 }
@@ -66,11 +109,11 @@
 }
 
 .side-bar {
-  position: sticky;
+  position: fixed;
   top: 8rem;
   height: 100%;
   left: 0;
-  margin-right: -8rem;
+  /* margin-right: 8rem; */
   /* min-height: 100%; */
   width: 14rem;
   background-color: transparent;
@@ -80,6 +123,8 @@
   border-right: 1px solid var(--bg-light);
   border-right: 2px solid var(--bg-dark);
   /* background-color: var(--bg-light); */
+  font-weight: 500;
+
 }
 
 .side-bar-align {
@@ -94,13 +139,14 @@
   font-size: 1.25rem;
   transition: 10ms;
   padding: 0.25rem;
+  color: var(--off-black);
 }
 
 .side-bar-btn:hover {
   font-size: 1.5rem;
   padding: 0.08rem;
-  background: radial-gradient(white, transparent 80%, transparent);
-  text-decoration: underline dashed var(--dark-red);
+  /* background: radial-gradient(var(--yellow), transparent 80%, transparent); */
+  /* text-decoration: underline dashed var(--dark-red); */
 
 }
 
@@ -110,6 +156,7 @@
   min-height: 120svh;
   display: flex;
   justify-content: center;
+  padding-left: 2.5%;
   /* align-items: center; */
 }
 
@@ -123,6 +170,18 @@
   box-shadow: var(--shadow);
   border-radius: 1rem;
   position: relative;
+  /* border: 4px dashed rgb(128, 128, 128); */
+}
+
+.this-page {
+  color: var(--darkYellow);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.page-one-contents {
+  font-size: 1.25rem;
+  line-height: 2.25rem;
 }
 
 .page.clear {
@@ -134,6 +193,7 @@
   height: 22rem;
   display: flex;
   align-items: center;
+  color: var(--off-black);
   transition: 1s;
 }
 
@@ -146,7 +206,7 @@
 
 .page-header {
   font-size: 3.5rem;
-  font-weight: 200;
+  font-weight: 500;
   padding-bottom: 2rem;
 }
 
@@ -162,7 +222,7 @@
 }
 
 .home-logo {
-  margin-top: 3.5rem;
+  margin-top: 0.25rem;
   margin-right: -1rem;
   width: 50%;
   object-fit: contain;
@@ -190,10 +250,10 @@
   transform: translateX(-50%);
   width: 50%;
   height: 4rem;
-  border: 2px dashed black;
+  border: 2px dashed var(--yellow);
   border-bottom: none;
   border-radius: 1rem;
-  z-index: 0;
+  z-index: -1;
 }
 
 .vert-card {
@@ -231,7 +291,7 @@
     width: 900px;
   }
   .side-bar {
-    position: sticky;
+    position: fixed;
     top: 8rem;
     height: 100%;
     left: 0;
@@ -255,6 +315,9 @@
   .page-header{
     font-size: 2.5rem;
   }
+  .home, .page {
+    width: 98%;
+  }
   .contents {
     width: full;
     padding-left: 0;
@@ -265,6 +328,46 @@
   .side-bar {
     position: absolute;
     position: sticky;
+    z-index: 1;
+    top: 0rem;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    font-size: 1rem;
+  }
+  .side-bar-align {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .side-bar-btn {
+    font-size: 1.25rem;
+    transition: 10ms;
+    padding: 0.25rem;
+  }
+}
+
+@media (width <= 600px) {
+  .nav-buttons-align {
+    display: none;
+  }
+  .page-header{
+    font-size: 2rem;
+  }
+  .home, .page {
+    flex-direction: column;
+    align-items: center;
+    width: 98%;
+  }
+  .contents {
+    width: full;
+    padding-left: 0;
+  }
+  .side-bar {
+    position: absolute;
+    position: fixed;
     z-index: 1;
     top: 0rem;
     width: 100%;
@@ -282,5 +385,13 @@
     font-size: 1.25rem;
     transition: 10ms;
     padding: 0.25rem;
+  }
+
+  .change-orientation {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .vert-card {
+    width: 100%;
   }
 }
