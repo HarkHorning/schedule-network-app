@@ -1,6 +1,6 @@
 # schedule-network-app
 
-A scheduling app project made with React and Django to make group scheduling easier. Nothing built on the back-end yet.
+A scheduling app project made with React and Django to make group scheduling easier. Nothing built on the back-end yet. Front-end layout mostly complete.
 
 
-made with React, Django, and MySQL
+Made with React, Django, and MySQL
