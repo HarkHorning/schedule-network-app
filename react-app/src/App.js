@@ -6,6 +6,7 @@ import Calendar from "./components/contents/Calendar";
 import Checklist from "./components/contents/Checklist";
 import Signin from "./components/contents/Signin";
 import BeePath from './bGDecorations/BeePath';
+import HoneycombBG from './bGDecorations/honeycombBG';
 
 
 // Routes
@@ -17,6 +18,7 @@ function App() {
       <div className="App">
         <NavBar />
         <BeePath />
+        <HoneycombBG />
         <section className="orientation h-full flex">
         <SideNav />
         <div className='contents'>

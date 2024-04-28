@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from "./logoCal.png";
 import Footer from '../Footer';
 import HowDo from './contents_sections/how_do_we';
+import More from './contents_sections/More';
 
 function Home() {
 
@@ -25,7 +26,7 @@ function Home() {
               <h1 className='page-header'>Fitting Schedules Together</h1>
             </header>
             <div className='page flex'>
-              <div className='w-2/3 flex flex-col'>
+              <div className='home-page-first w-2/3 flex flex-col'>
                 <h2 className='this-page flex mt-6 text-5xl font-semibold'>This is the home page:</h2>
                 <p className='page-one-contents text-black mt-12 leading-8 pr-2'>
                   A way to never miscomunicate schedules again. Seemlessly integrate the schedules of other users with your own.
@@ -35,6 +36,7 @@ function Home() {
               <img className='home-logo' src={logo} alt='logo' />
             </div>
           <HowDo />
+          <More />
           <Footer />
           </div>
     </header>

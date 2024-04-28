@@ -4,9 +4,16 @@ function Signin() {
   return (
     <header className='contents'>
         <div className='page clear flex justify-center'>
-            <section className='w-3/5 z-10 min-w-96 h-4/5 bg-gradient-to-br from-blue-300 to-yellow-200 flex flex-col justify-center items-center'>
+            <section className='w-3/5 z-10 min-w-96 h-4/5 bg-gradient-to-br from-yellow-300 to-yellow-600 flex flex-col justify-center items-center relative overflow-hidden gap-4'>
                 <h1 className='text-2xl font-medium text-white z-10 mb-2'>Sign In</h1>
                 {/* <img src={logo} className="absolute w-1/3 c-" alt="logo" /> */}
+
+                <div className='honeycomb'>
+                </div>
+                <div className='honeycomb two'>
+                </div>
+                <div className='honeycomb three'>
+                </div>
                 <form className='w-3/4 grid grid-cols-1 text-white text-lg gap-1 z-10 mb-6'>
                 <label value=''>Username</label>
                 <input

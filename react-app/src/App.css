@@ -16,6 +16,7 @@
   --shadow: 2px 4px 6px 1px #737d8f2c;
   --yellow: rgb(255, 239, 98);
   --darkYellow: rgba(234, 179, 8, 0.842);
+  --bg-grey: #cfd0d4;
 }
 
 .App {
@@ -142,6 +143,40 @@
   top: 1rem;
 }
 
+.honey-pattern-bg {
+  position: fixed;
+  z-index: -2;
+  right: 10rem;
+  bottom: 4rem;
+  width: 8rem;
+  /* overflow: hidden; */
+}
+
+.bg {
+  background-color: var(--bg-grey);
+  width: 85.5px;
+  height: 150px;
+}
+.bg::before {
+  border-right: solid 42px var(--bg-grey);
+  border-top: solid transparent 75px;
+  border-bottom: solid transparent 75px;
+  left: -41.7px;
+}
+.bg::after {
+  border-right: solid 42px var(--bg-grey);
+  border-top: solid transparent 75px;
+  border-bottom: solid transparent 75px;
+  left: 85.35px;
+}
+.bg-two {
+  left: 10rem;
+}
+.bg-three {
+  left: 15rem;
+  top: -10rem;
+}
+
 .nav-buttons-align {
   display: flex;
   gap: 5rem;
@@ -181,7 +216,7 @@
 .side-bar {
   position: fixed;
   top: 8rem;
-  height: 100%;
+  height: max-content;
   left: 0;
   /* margin-right: 8rem; */
   /* min-height: 100%; */
@@ -249,6 +284,12 @@
   margin-bottom: 0.5rem;
 }
 
+.home-page-first {
+  width: 66%;
+  display: flex;
+  flex-direction: column;
+}
+
 .page-one-contents {
   font-size: 1.25rem;
   line-height: 2.25rem;
@@ -301,11 +342,13 @@
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+  border: 2px solid var(--off-black);
 }
 
 .calendar-day {
   height: 5rem;
   font-weight: 600;
+  background-color: var(--bg-light);
 }
 
 .past-future {
@@ -437,9 +480,9 @@
   }
   .side-bar {
     position: absolute;
-    position: fixed;
+    position: sticky;
     z-index: 1;
-    top: 0rem;
+    top: 4rem;
     width: 100%;
     background-color: transparent;
     font-size: 1rem;
@@ -462,6 +505,13 @@
     gap: 1rem;
   }
   .vert-card {
+    width: 100%;
+  }
+  .home-page-first {
+    width: 100%;
+  }
+  .home-logo {
+    margin-top: 1rem;
     width: 100%;
   }
 }

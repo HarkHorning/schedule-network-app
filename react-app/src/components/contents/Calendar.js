@@ -2,8 +2,14 @@ import React from 'react';
 
 function Calendar() {
   return (
-    <header className='contents'>
-        <div className='page'>
+    <header className='contents '>
+        <div className='page bg-gradient-to-br from-yellow-300 to-yellow-600 overflow-hidden'>
+            <div className='honeycomb'>
+            </div>
+            <div className='honeycomb two'>
+            </div>
+            <div className='honeycomb three'>
+            </div>
             <h2 className='text-xl border-b-2 pb-8'>Calendar</h2>
             <ul className='calendar-grid'>
               <li className='calendar-day border-2 past-future'>31</li>
