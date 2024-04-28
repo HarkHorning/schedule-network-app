@@ -36,8 +36,8 @@
   height: 45rem;
   border-radius: 0 90% 0 0;
   /* background-color: var(--darkYellow); */
-  border-top: 6px dashed rgba(234, 179, 8, 0.1);
-  border-right: 6px dashed rgba(234, 179, 8, 0.15);
+  border-top: 4px dashed rgb(248, 235, 194);
+  border-right: 6px dashed rgb(248, 235, 194);
   top: 20%;
   left: 0;
   z-index: -1;
@@ -50,7 +50,7 @@
   height: 25rem;
   border-radius: 0 100% 0 0;
   /* background-color: var(--darkYellow); */
-  border-top: 6px dashed rgba(234, 179, 8, 0.15);
+  border-top: 4px dashed rgb(248, 235, 194);
   /* border-right: 6px dashed rgba(234, 179, 8, 0.15); */
   top: 20%;
   left: 0;
@@ -67,10 +67,79 @@
   font-size: 1.5rem;
   display: flex;
   justify-content: space-between;
-  padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+  padding: 0.25rem 0.75rem 0.5rem 0.75rem;
   /* border-bottom: 4px solid var(--yellow); */
   font-weight: 500;
+  position: relative;
+  overflow: hidden;
 
+}
+
+.honey-pattern {
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+
+.honey-division {
+  position: absolute;
+  width: 25rem;
+  left: 25%;
+}
+
+.honey-division-two {
+  position: absolute;
+  width: 25rem;
+  left: 70%;
+}
+
+.honeycomb {
+  position: absolute;
+  top: -1.5rem;
+  left: 0rem;
+  background-color: var(--darkYellow);
+  width: 28.5px;
+  height: 50px;
+  transform: rotate(90deg);
+}
+.honeycomb::before {
+  content: "";
+  display: block;
+  border-right: solid 14px var(--darkYellow);
+  border-top: solid transparent 25px;
+  border-bottom: solid transparent 25px;
+  position: absolute;
+  left: -13.9px;
+  top: 0px;
+}
+.honeycomb::after {
+  content: "";
+  display: block;
+  border-right: solid 14px var(--darkYellow);
+  border-top: solid transparent 25px;
+  border-bottom: solid transparent 25px;
+  position: absolute;
+  left: 28.45px;
+  transform: scaleX(-1);
+}
+
+.two {
+  left: 3.5rem;
+}
+.three {
+  left: 5.25rem;
+  top: 1.5rem;
+}
+.four {
+  left: 7rem;
+}
+.five {
+  left: 2rem;
+  top: -2rem;
+}
+.six {
+  left: 0rem;
+  top: 1rem;
 }
 
 .nav-buttons-align {
@@ -83,13 +152,14 @@
   color: rgb(255, 255, 255);
   font-size: 1.25rem;
   font-weight: 500;
-
+  z-index: 1;
 }
 
 .page-title {
   color: white;
   font-weight: 900;
   display: flex;
+  z-index: 1;
 }
 
 .only-title {
@@ -116,7 +186,7 @@
   /* margin-right: 8rem; */
   /* min-height: 100%; */
   width: 14rem;
-  background-color: transparent;
+  background-color: var(--bg-light);
   font-size: 1.25rem;
   padding: 0.25rem 0.75rem;
   color: var(--text-gray);

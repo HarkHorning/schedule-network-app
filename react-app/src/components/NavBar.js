@@ -1,10 +1,12 @@
 import React from 'react';
 import  { Link, NavLink } from 'react-router-dom';
 import bee from "./bee.png";
+import Honeycomb from '../bGDecorations/honeycomb';
 
 function NavBar() {
   return (
     <div className='navigation-bar'>
+      <Honeycomb />
         <Link to="/" className='page-title'>
           <img className='bee-logo' src={bee} alt='logo' />
           <span className='only-title'>Schedule Bees</span>
