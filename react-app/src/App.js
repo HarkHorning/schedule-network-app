@@ -10,9 +10,24 @@ import HoneycombBG from './bGDecorations/honeycombBG';
 
 
 // Routes
+import React, { useState, useEffect } from 'react';
 import  { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
+
+  const [backendData, setBackendData] = useState([{}]);
+
+  useEffect(() => {
+    fetch("/api").then(
+      response => response.json()
+    ).then(
+      data => {
+        setBackendData(data)
+
+      }
+    )
+  }, [])
+
   return (
     <BrowserRouter >
       <div className="App">
@@ -21,6 +36,13 @@ function App() {
         <HoneycombBG />
         <section className="orientation h-full flex">
         <SideNav />
+        {(typeof backendData.users === 'undefined') ? (
+          <p>Loading...</p>
+        ) : (
+          backendData.users.map((user, i) => (
+            <p key={i}>{user}</p>
+          ))
+        )}
         <div className='contents'>
           <Routes>
             <Route index element={<Home />} />
